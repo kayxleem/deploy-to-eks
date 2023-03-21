@@ -14,7 +14,7 @@ pipeline {
                         sh "aws eks --region us-west-2 update-kubeconfig --name finalexamproject"
                         sh "kubectl apply -f mongo-secret.yaml"
                         sh "kubectl apply -f mongo.yaml"
-                        sh "kubectl apply -f mongo-configmap"
+                        sh "kubectl apply -f mongo-configmap.yaml"
                         sh "kubectl apply -f mongo-express.yaml"
                     }
                 }
